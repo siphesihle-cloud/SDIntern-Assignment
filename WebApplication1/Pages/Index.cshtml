@@ -1,0 +1,245 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "FILL OUT SURVEY";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rating Table</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+   td {
+    border: 1px solid skyblue;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+            border: 1px solid;
+            padding: 8px;
+            text-align: center;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+        .submit {
+            display: block;
+            margin: 0 auto; /* To center the button horizontally */
+            text-align: center; /* To center the text inside the button */
+            background-color: blue;
+            color: white; /* Text color */
+            padding: 10px 20px; /* Padding for the button */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Show pointer on hover */
+            
+        }
+
+        .date {
+            border: 2px solid skyblue;
+            margin-left:300px;
+            
+            display: block; /* Ensure it takes up the full width */
+            
+            
+        }
+
+        .name{
+            border: 2px solid skyblue;
+            margin-left: 300px;
+            display: block; /* Ensure it takes up the full width */
+        }
+
+        .email{
+            border: 2px solid skyblue;
+            margin-left: 300px;
+            display: block; /* Ensure it takes up the full width */
+        }
+
+        .contact {
+            border: 2px solid skyblue;
+            margin-left: 300px;
+            display: block; /* Ensure it takes up the full width */
+        }
+
+        .l1 {
+            display: block;
+            margin-left: 300px; /* Align text in the center */
+            
+        }
+
+        .l2{
+            display: block;
+            margin-left: 300px; /* Align text in the center */
+            
+        }
+
+        .l3 {
+            display: block;
+            margin-left: 300px; /* Align text in the center */
+            
+        }
+
+        .l4 {
+            display: block;
+            margin-left: 300px; /* Align text in the center */
+            
+        }
+
+        .c4 {
+            display: inline-block;
+            margin-left:30px;
+        }
+
+        .c3{
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        .c2 {
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        .c1 {
+            display: inline-block;
+            margin-left: 100px;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    
+    <br />
+    <br />
+    
+    <div class="in">
+        Personal Details:
+    <label class="l1">Full Names</label>
+    
+    <input class="name" />
+    <br />
+    
+    <label class="l2">Email</label>
+    
+    <input class="email" />
+    <br />
+    
+    <label class="l3">Date of Birth</label>
+    
+    <input class="date"/>
+    <br />
+    
+    <label class="l4">Contact Number</label>
+   
+    <input class="contact"/>
+    </div>
+    <br />
+    <br />
+    
+    <div class="check">
+        What is your favorite food?
+    <label class="c1" for="checkbox1">
+        <input type="checkbox" id="checkbox1" name="checkbox1">
+            <span class="checkmark"></span>
+        Pizza
+    </label>
+    
+
+    <label class="c2" for="checkbox2">
+        <input type="checkbox" id="checkbox2" name="checkbox2"> Pasta
+    </label>
+    
+
+    <label class="c3" for="checkbox3">
+        <input type="checkbox" id="checkbox3" name="checkbox3"> Pap and Wors
+    </label>
+    
+
+    <label class="c4" for="checkbox4">
+        <input type="checkbox" id="checkbox4" name="checkbox4"> Other
+    </label>
+    </div>
+    <br>
+    
+    
+    Please rate your level of agreement on a scale from 1 to 5, with 1 being "Strongly agree" and 5 being "Strongly disagree."
+    <br />
+    <br />
+
+<table>
+  <tr>
+    <th></th>
+    <th>Strongly Agree</th>
+    <th>Agree</th>
+    <th>Neutral</th>
+    <th>Disagree</th>
+    <th>Strongly Disagree</th>
+  </tr>
+        <tr class="tr1">
+            <td>I like to watch movies</td>
+            <td><input type="radio" name="rating" value="1" onclick="rate(1)"></td>
+            <td><input type="radio" name="rating" value="2" onclick="rate(2)"></td>
+            <td><input type="radio" name="rating" value="3" onclick="rate(3)"></td>
+            <td><input type="radio" name="rating" value="4" onclick="rate(4)"></td>
+            <td><input type="radio" name="rating" value="5" onclick="rate(5)"></td>
+        </tr>
+        <tr class="tr2">
+            <td>I like to watch movies</td>
+            <td><input type="radio" name="rating" value="1" onclick="rate(1)"></td>
+            <td><input type="radio" name="rating" value="2" onclick="rate(2)"></td>
+            <td><input type="radio" name="rating" value="3" onclick="rate(3)"></td>
+            <td><input type="radio" name="rating" value="4" onclick="rate(4)"></td>
+            <td><input type="radio" name="rating" value="5" onclick="rate(5)"></td>
+        </tr>
+        <tr>
+
+        <tr>
+            <td>I like to watch movies</td>
+            <td><input type="radio" name="rating" value="1" onclick="rate(1)"></td>
+            <td><input type="radio" name="rating" value="2" onclick="rate(2)"></td>
+            <td><input type="radio" name="rating" value="3" onclick="rate(3)"></td>
+            <td><input type="radio" name="rating" value="4" onclick="rate(4)"></td>
+            <td><input type="radio" name="rating" value="5" onclick="rate(5)"></td>
+        </tr>
+        <tr>
+
+        <tr>
+            <td>I like to watch movies</td>
+            <td><input type="radio" name="rating" value="1" onclick="rate(1)"></td>
+            <td><input type="radio" name="rating" value="2" onclick="rate(2)"></td>
+            <td><input type="radio" name="rating" value="3" onclick="rate(3)"></td>
+            <td><input type="radio" name="rating" value="4" onclick="rate(4)"></td>
+            <td><input type="radio" name="rating" value="5" onclick="rate(5)"></td>
+        </tr>
+        <tr>
+
+  <!-- Add more rows as needed -->
+</table>
+
+<script>
+  function rate(rating) {
+    // Handle rating logic here, such as sending it to a server
+    console.log("Rated:", rating);
+  }
+</script>
+<br />
+<br />
+<button class="submit" >Submit</button>
+</body>
+</html>
+
+
+
+
