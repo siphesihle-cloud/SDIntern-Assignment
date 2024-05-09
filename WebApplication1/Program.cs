@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using WebApplication1.Models;
+using Microsoft.Extensions.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<SurveyContext>(options =>
+               options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=SurveyDB;Trusted_Connection=True;"));
 
 var app = builder.Build();
 
