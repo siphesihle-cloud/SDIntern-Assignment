@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<SurveyContext>(options =>
-               options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=SurveyDB;Trusted_Connection=True;"));
+               options.UseSqlServer("Server=(localhost);Database=SurveyDB;Trusted_Connection=True;"));
 
 var app = builder.Build();
 
